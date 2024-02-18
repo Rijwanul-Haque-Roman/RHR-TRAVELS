@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>RHR Travels</title>
@@ -29,14 +30,14 @@
                         </svg>
                     </div>
                     <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-raleway">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Destination</a></li>
                         <li><a>Contacts</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost font-raleway text-4xl font-extrabold">RHR TRAVELS</a>
+                <a class="btn btn-ghost font-raleway text-4xl font-extrabold font-raleway">RHR TRAVELS</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-lg font-raleway ">
@@ -47,17 +48,46 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn bg-[#1cd1002f] text-[#1DD100] border-[2px] border-[#1DD100] px-6"><img
-                        src="images/bus-icon.png" alt="">BUS</a>
+                <a
+                    class="btn bg-[#1cd1002f] text-[#1DD100] border-[2px] border-[#1DD100] px-6 font-raleway text-xl font-bold">Bus<img
+                        src="images/bus-icon.png" alt=""></a>
             </div>
         </div>
         <!-- banner section -->
         <div
-            class="w-full h-[76vh] flex flex-col justify-center items-center bg-[url('/images/banner.png')] bg-no-repeat bg-cover bg-center mt-9">
-            <h1>Travel Peacefully And Safely With</h1>
-            <h2>RHR TRAVELS</h2>
-            <p>We have the widest range of luxury inter-city buses. Travel with us for a memorable journey</p>
-            <button class="btn btn-success">Success</button>
+            class="w-full h-[77vh] flex flex-col justify-center items-center bg-[url('/images/banner.png')] bg-no-repeat bg-cover bg-center mt-9 rounded-3xl gap-8">
+            <h1 class="text-center text-white font-raleway text-6xl font-extrabold leading-[85px]">Travel Peacefully And
+                Safely
+                With<br>
+                <span class="text-[#1DD100]">RHR TRAVELS</span>
+            </h1>
+            <p class="text-white font-inter text-center w-1/3">We have the widest range of luxury inter-city buses.
+                Travel with us
+                for a
+                memorable
+                journey</p>
+            <button class="btn text-black bg-[#1DD100] font-raleway text-xl font-bold px-6 border-none">Buy
+                Tickets</button>
+        </div>
+        <!-- statistics section -->
+        <div class="mb-[120px] relative">
+            <div class="flex justify-evenly relative mt-[-70px]">
+                <div
+                    class="bg-white text-black flex justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
+                    <img src="images/people.png" alt="">
+                    <p><span>500K+</span><br> Registered users</p>
+                </div>
+                <div
+                    class="bg-white text-black flex justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <p><span>1.7 lacks</span><br>Tickets sold</p>
+                </div>
+                <div
+                    class="bg-white text-black flex justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
+                    <img src="images/stoppage.png" alt="">
+                    <p><span>80K+</span><br>Rental partners</p>
+                </div>
+            </div>
         </div>
     </header>
     <main class="container mx-auto">
