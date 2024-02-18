@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- header section -->
     <header class="container mx-auto">
         <!-- navigation section -->
         <div class="navbar bg-base-100 mt-14">
@@ -66,32 +67,72 @@
                 for a
                 memorable
                 journey</p>
-            <button class="btn text-black bg-[#1DD100] font-raleway text-xl font-bold px-6 border-none">Buy
+            <button
+                class=" btn btn-lg hover:bg-[#4aaa00] text-black bg-[#1DD100] font-raleway text-xl font-bold px-8 py-4 border-none">Buy
                 Tickets</button>
         </div>
         <!-- statistics section -->
-        <div class="mb-[120px] relative">
+        <div class="relative">
             <div class="flex justify-evenly relative mt-[-70px]">
                 <div
-                    class="bg-white text-black flex justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
+                    class="bg-white text-black flex gap-4 justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
                     <img src="images/people.png" alt="">
-                    <p><span>500K+</span><br> Registered users</p>
+                    <p class="text-gray-500"><span class=" text-black font-inter text-4xl font-bold">500K+</span><br>
+                        Registered
+                        users</p>
                 </div>
                 <div
-                    class="bg-white text-black flex justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
+                    class="bg-white text-black flex gap-4 justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
                     <img src="images/ticket-cupon.png" alt="">
-                    <p><span>1.7 lacks</span><br>Tickets sold</p>
+                    <p class="text-gray-500"><span class=" text-black font-inter text-4xl font-bold">1.7
+                            lacks</span><br>Tickets sold</p>
                 </div>
                 <div
-                    class="bg-white text-black flex justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
+                    class="bg-white text-black flex gap-4 justify-center items-center w-80 h-36 rounded-3xl shadow-[0px_5px_0px_#1DD100]">
                     <img src="images/stoppage.png" alt="">
-                    <p><span>80K+</span><br>Rental partners</p>
+                    <p class="text-gray-500"><span
+                            class=" text-black font-inter text-4xl font-bold">80K+</span><br>Rental partners</p>
                 </div>
             </div>
         </div>
     </header>
-    <main class="container mx-auto">
+    <!-- main section -->
+    <main>
+        <!-- offer section -->
+        <section class="my-[120px] container mx-auto">
+            <h2 class="text-center font-raleway text-4xl font-bold text-black mb-12">Best offers for you</h2>
+            <!-- offer coupons -->
+            <div class="flex justify-evenly">
+                <div class="w-2/5 h-[220px] bg-[#ffbf0f] rounded-3xl flex justify-between items-center ">
+                    <div class="flex-1 p-12 space-y-3">
+                        <h3 class="font-inter font-extrabold text-black text-4xl">15% OFF</h3>
+                        <p class="text-black font-inter text-xl font-semibold">on your next purchase</p>
+                        <p class="text-[#03071280] text-lg">use by March 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="px-12 spacin-y-3 text-center">
+                        <h3 class="font-raleway font-bold text-black text-3xl">NEW15</h3>
+                        <p class="text-[#03071280] text-lg">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="w-2/5 h-[220px] bg-[#F78C9C] rounded-3xl flex justify-between items-center ">
+                    <div class="flex-1 p-12 space-y-3">
+                        <h3 class="font-inter font-extrabold text-black text-4xl">20% OFF</h3>
+                        <p class="text-black font-inter text-xl font-semibold">on your next purchase</p>
+                        <p class="text-[#03071280] text-lg">use by March 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="px-12 spacin-y-3 text-center">
+                        <h3 class="font-raleway font-bold text-black text-3xl">Couple 20</h3>
+                        <p class="text-[#03071280] text-lg">Coupon Code</p>
+                    </div>
+                </div>
 
+            </div>
+            <div class="text-center mt-16">
+                <button class="btn btn-lg btn-outline text-[#1DD100] font-raleway text-xl">See All Offers</button>
+            </div>
+        </section>
     </main>
 </body>
 
