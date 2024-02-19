@@ -1,4 +1,8 @@
 /* CUSTOM CSS */
+.word-spacing {
+    word-spacing: 70px;
+}
+
 .font-inter {
     font-family: "Inter", sans-serif;
 }
