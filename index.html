@@ -74,10 +74,9 @@
                 for a
                 memorable
                 journey</p>
-            <a href="#ticket-purchase-section">
-                <button
-                    class="btn btn-lg hover:bg-[#4aaa00] text-black bg-[#1DD100] font-raleway text-xl font-bold px-8 py-4 border-none">Buy
-                    Tickets</button></a>
+            <button onclick="scrollToSection()"
+                class="btn btn-lg hover:bg-[#4aaa00] text-black bg-[#1DD100] font-raleway text-xl font-bold px-8 py-4 border-none">Buy
+                Tickets</button>
         </div>
         <!-- statistics section -->
         <div class="my-10 lg: flex justify-center items-center lg:relative">
@@ -174,7 +173,6 @@
                                     src="images/seat-green.png" alt=""><span id="seat-left">40</span>
                                 seats
                                 left</button>
-
                         </div>
                         <div class="bg-[#F7F8F8] rounded-3xl mt-6 ">
                             <div
@@ -211,6 +209,7 @@
                     </div>
                 </div>
             </div>
+            <!-- seat selection buttons -->
             <div class="container mx-auto lg:p-8 rounded-3xl bg-white">
                 <div class="flex flex-col lg:flex-row justify-between ">
                     <div class="flex-1 lg:border-r-2 border-dashed p-4 lg:pr-8">
@@ -234,108 +233,109 @@
                             <div class="text-right">
                                 <button class="btn btn-lg px-10 mt-6"><img src="images/steering.svg" alt=""></button>
                             </div>
-                            <div class="">
-                                <div class="grid grid-cols-5 lg:grid-cols-6 gap-4 lg:gap-8 mt-6 items-center">
+                            <div>
+                                <div id="allSeats"
+                                    class="grid grid-cols-5 lg:grid-cols-6 gap-4 lg:gap-8 mt-6 items-center">
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">A</p>
-                                    <button id="A1" onclick="selectedSeats('A1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">A1</button>
-                                    <button id="A2" onclick="selectedSeats('A2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">A2</button>
+                                    <button id="A1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">A1</button>
+                                    <button id="A2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">A2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="A3" onclick="selectedSeats('A3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">A3</button>
-                                    <button id="A4" onclick="selectedSeats('A4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">A4</button>
+                                    <button id="A3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">A3</button>
+                                    <button id="A4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">A4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">B</p>
-                                    <button id="B1" onclick="selectedSeats('B1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">B1</button>
-                                    <button id="B2" onclick="selectedSeats('B2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">B2</button>
+                                    <button id="B1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">B1</button>
+                                    <button id="B2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">B2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="B3" onclick="selectedSeats('B3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">B3</button>
-                                    <button id="B4" onclick="selectedSeats('B4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">B4</button>
+                                    <button id="B3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">B3</button>
+                                    <button id="B4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">B4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">C</p>
-                                    <button id="C1" onclick="selectedSeats('C1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">C1</button>
-                                    <button id="C2" onclick="selectedSeats('C2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">C2</button>
+                                    <button id="C1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">C1</button>
+                                    <button id="C2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">C2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="C3" onclick="selectedSeats('C3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">C3</button>
-                                    <button id="C4" onclick="selectedSeats('C4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">C4</button>
+                                    <button id="C3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">C3</button>
+                                    <button id="C4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">C4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">D</p>
-                                    <button id="D1" onclick="selectedSeats('D1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">D1</button>
-                                    <button id="D2" onclick="selectedSeats('D2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">D2</button>
+                                    <button id="D1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">D1</button>
+                                    <button id="D2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">D2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="D3" onclick="selectedSeats('D3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">D3</button>
-                                    <button id="D4" onclick="selectedSeats('D4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">D4</button>
+                                    <button id="D3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">D3</button>
+                                    <button id="D4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">D4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">E</p>
-                                    <button id="E1" onclick="selectedSeats('E1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">E1</button>
-                                    <button id="E2" onclick="selectedSeats('E2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">E2</button>
+                                    <button id="E1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">E1</button>
+                                    <button id="E2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">E2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="E3" onclick="selectedSeats('E3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">E3</button>
-                                    <button id="E4" onclick="selectedSeats('E4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">E4</button>
+                                    <button id="E3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">E3</button>
+                                    <button id="E4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">E4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">F</p>
-                                    <button id="F1" onclick="selectedSeats('F1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">F1</button>
-                                    <button id="F2" onclick="selectedSeats('F2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">F2</button>
+                                    <button id="F1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">F1</button>
+                                    <button id="F2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">F2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="F3" onclick="selectedSeats('F3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">F3</button>
-                                    <button id="F4" onclick="selectedSeats('F4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">F4</button>
+                                    <button id="F3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">F3</button>
+                                    <button id="F4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">F4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">G</p>
-                                    <button id="G1" onclick="selectedSeats('G1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">G1</button>
-                                    <button id="G2" onclick="selectedSeats('G2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">G2</button>
+                                    <button id="G1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">G1</button>
+                                    <button id="G2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">G2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="G3" onclick="selectedSeats('G3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">G3</button>
-                                    <button id="G4" onclick="selectedSeats('G4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">G4</button>
+                                    <button id="G3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">G3</button>
+                                    <button id="G4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">G4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">H</p>
-                                    <button id="H1" onclick="selectedSeats('H1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">H1</button>
-                                    <button id="H2" onclick="selectedSeats('H2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">H2</button>
+                                    <button id="H1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">H1</button>
+                                    <button id="H2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">H2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="H3" onclick="selectedSeats('H3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">H3</button>
-                                    <button id="H4" onclick="selectedSeats('H4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">H4</button>
+                                    <button id="H3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">H3</button>
+                                    <button id="H4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">H4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">I</p>
-                                    <button id="I1" onclick="selectedSeats('I1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">I1</button>
-                                    <button id="I2" onclick="selectedSeats('I2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">I2</button>
+                                    <button id="I1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">I1</button>
+                                    <button id="I2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">I2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="I3" onclick="selectedSeats('I3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">I3</button>
-                                    <button id="I4" onclick="selectedSeats('I4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">I4</button>
+                                    <button id="I3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">I3</button>
+                                    <button id="I4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">I4</button>
                                     <p class="text-center text-[#03071280] font-inter text-lg font-medium">J</p>
-                                    <button id="J1" onclick="selectedSeats('J1')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">J1</button>
-                                    <button id="J2" onclick="selectedSeats('J2')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">J2</button>
+                                    <button id="J1"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">J1</button>
+                                    <button id="J2"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">J2</button>
                                     <div class="hidden lg:grid"></div>
-                                    <button id="J3" onclick="selectedSeats('J3')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">J3</button>
-                                    <button id="J4" onclick="selectedSeats('J4')"
-                                        class="btn lg:btn-lg px-8 bg-[#F7F8F8] border-none hover:bg-[#1dd100] hover:text-white text-[#03071280] font-inter lg:text-lg font-medium">J4</button>
+                                    <button id="J3"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">J3</button>
+                                    <button id="J4"
+                                        class="seat btn lg:btn-lg px-8 bg-[#F7F8F8] border-none text-[#03071280] font-inter lg:text-lg font-medium">J4</button>
                                 </div>
                             </div>
                         </div>
@@ -353,7 +353,7 @@
                                 <p>Price</p>
                             </div>
                             <div id="seat-selection"
-                                class="text-[#03071299] flex flex-col justify-between py-4 mx-8 text-base font-medium font-inter">
+                                class="text-[#03071299] flex flex-col py-4 mx-8 text-base font-medium font-inter">
 
                             </div>
                             <div
@@ -416,8 +416,7 @@
                 </p>
                 <div class="modal-action text-center flex justify-center items-center">
                     <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button
+                        <button onclick="reload()"
                             class="btn bg-[#27AE60] hover:bg-[#1dd100] text-white w-44 rounded-3xl border-none">Continue</button>
                     </form>
                 </div>
